@@ -1,5 +1,18 @@
-<div *ngFor="let stitch of stitches">
-  <h3> {{ stitch.project }}</h3>
-  <h4> {{ stitch.order }}</h4>
-  <p> {{ stitch.customer }}</p>
+<div *ngFor="let stitch of stitches" class="col-sm-4"(click)="SelectedFun(stitch.project)">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>{{ stitch.project }}</h1>
+       </div>
+        <div class="panel-body">
+          <p><strong>{{ stitch.bid }} </strong>A</p>
+          <p><strong>{{ stitch.order }} </strong>B</p>
+        </div>
+        <div class="panel-footer">
+          <h3> 0 | {{ stitch.proceeds }}</h3>
+          <h4>Lifetime</h4>
+        </div>
+    </div>
+  </div>
 </div>

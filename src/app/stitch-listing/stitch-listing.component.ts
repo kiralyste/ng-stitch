@@ -9,6 +9,13 @@ import { stitches } from "./../data/stitches";
 export class StitchListingComponent implements OnInit {
 
   stitches: Array<any> = stitches;
+  selected:string=null; 
+
+
+  SelectedFun(a){
+    this.selected=a;
+    console.log(a)
+  }
 
   constructor() { }
 
